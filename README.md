@@ -1,4 +1,4 @@
-### 0x19. C - Stacks, Queues - LIFO, FIFO
+### Monty : 0x19. C - Stacks, Queues - LIFO, FIFO
 
 ### BARTA ZOUHAIR and Hicham EL MAATAOUI
 
