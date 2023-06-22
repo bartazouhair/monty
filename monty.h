@@ -71,7 +71,7 @@ void pintMonty(stack_t **stk, unsigned int cntr);
 void popMonty(stack_t **stk, unsigned int cntr);
 void pstrMonty(stack_t **stk, unsigned int cntr);
 void pushMonty(stack_t **stk, unsigned int cntr);
-void addqueue(stack_t **stk, int n);
+void addMontyqueue(stack_t **stk, int n);
 void queueMonty(stack_t **stk, unsigned int cntr);
 void rotlMonty(stack_t **stk, unsigned int cntr);
 void rotrMonty(stack_t **stk, __attribute__((unused)) unsigned int cntr);
