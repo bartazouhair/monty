@@ -1,4 +1,4 @@
-### Monty
+### Monty : C - Stacks, Queues - LIFO, FIFO
 
 ### BARTA ZOUHAIR and Hicham EL MAATAOUI
 
