@@ -1,6 +1,6 @@
 ### Monty
 
-### BARTA ZOUHAIR and Hicham ELMaa
+### BARTA ZOUHAIR and Hicham EL MAATAOUI
 
 ### This repository contains the Monty project, which is a simple interpreter for Monty bytecode files. The project is implemented in C.
 

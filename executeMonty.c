@@ -1,11 +1,12 @@
 #include "monty.h"
 /**
- * executeMonty - to executes the opcode
- * @stk: it's stack linked list - stack
- * @cntr: it's line counter
- * @f: it's poiner to monty file
- * @cont: line content
- * Return: void
+ * executeMonty - Executes the opcode
+ * @stk: Stack linked list
+ * @cntr: Line counter
+ * @f: Pointer to Monty file
+ * @cont: Line content
+ *
+ * Return: 0 if successful, 1 if unknown instruction
  */
 int executeMonty(char *cont, stack_t **stk, unsigned int cntr, FILE *f)
 {
@@ -27,7 +28,8 @@ int executeMonty(char *cont, stack_t **stk, unsigned int cntr, FILE *f)
 		{"rotr", rotrMonty},
 		{"sub", subMonty},
 		{"swap", swapMonty},
-		{NULL, NULL}};
+		{NULL, NULL}
+	};
 
 	unsigned int i = 0;
 	char *ops;
@@ -36,6 +38,7 @@ int executeMonty(char *cont, stack_t **stk, unsigned int cntr, FILE *f)
 	if (ops && ops[0] == '#')
 		return (0);
 	bs.argm = strtok(NULL, " \n\t");
+
 	while (opstt[i].opcode && ops)
 	{
 		if (strcmp(ops, opstt[i].opcode) == 0)
@@ -45,6 +48,7 @@ int executeMonty(char *cont, stack_t **stk, unsigned int cntr, FILE *f)
 		}
 		i++;
 	}
+
 	if (ops && opstt[i].opcode == NULL)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", cntr, ops);
@@ -53,5 +57,6 @@ int executeMonty(char *cont, stack_t **stk, unsigned int cntr, FILE *f)
 		freeMontyStack(*stk);
 		exit(EXIT_FAILURE);
 	}
+
 	return (1);
 }
