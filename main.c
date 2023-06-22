@@ -1,3 +1,4 @@
+#define  _POSIX_C_SOURCE 200809L
 #include "monty.h"
 bus_y bs = {NULL, NULL, NULL, 0};
 
